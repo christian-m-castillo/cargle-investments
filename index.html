@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargle Investments</title>
+  <style>
+    :root {
+      --gold: rgb(250, 201, 140);
+      --beige: rgb(180, 178, 165); 
+    }
+    body {
+      font-family: Helvetica, sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+      background-color: var(--beige);
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      background-color: black;
+      color: var(--gold);
+      text-align: center;
+      padding: 0px 20px;
+      width: 100%;
+    }
+
+    header h1 {
+      font-weight: 400;
+      margin: 1rem 0rem .7rem 0rem;
+    }
+
+    header p {
+      font-weight: 100;
+      margin: 0rem 0rem 1rem 0rem;
+      font-style: italic;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    .card img {
+      max-width: 100px;
+      border-radius: 50%;
+    }
+
+    .cta {
+      background-color: white;
+      color: black;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      width: 80%;
+      margin: 1.5rem 0 3rem 0;
+    }
+    .cta a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cargle Investments</h1>
+    <p>Secure Your Legacy With Us</p>
+  </header>
+  
+  <div class="container">
+    <div class="card" id="selling">
+      <h2>Selling Properties</h2>
+      <img src="./img/selling.jpg" alt="">
+      <p>We help homeowners sell their properties quickly and efficiently. Whether you're facing foreclosure, relocating, or just need a hassle-free sale, we provide solutions tailored to your needs.</p>
+    </div>
+    
+    <div class="card" id="buying">
+      <h2>Buying Properties</h2>
+      <img src="./img/buying.jpg" alt="">
+      <p>Looking for your next investment or dream home? We acquire quality properties and offer great deals to investors and families alike.</p>
+    </div>
+    
+    <div class="card" id="education">
+      <h2>Real Estate Investment Education</h2>
+      <img src="./img/education.jpeg" alt="">
+      <p>We believe in empowering families with knowledge. Our education program teaches you how to build wealth through real estate investment.</p>
+    </div>
+    
+    <div class="card bio">
+      <h2>About Us</h2>
+      <img src="./img/profile-photo-square.jpeg" alt="Founder of Cargle Investments">
+      <p>Founded on strong family values, Cargle Investments is dedicated to helping people create lasting legacies through real estate. We believe in honesty, integrity, and treating every client like family.</p>
+    </div>
+  </div>
+  
+  <div class="cta">
+    <h2>Contact Us</h2>
+    <p>Call us at <a href="tel:4057646948">405-764-6948</a> or email us at <a href="mailto:cargleinvestment@gmail.com">cargleinvestment@gmail.com</a></p>
+  </div>
+</body>
+</html>
