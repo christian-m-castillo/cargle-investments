@@ -1,0 +1,33 @@
+/ (Root)
+│── index.html                # Splash page with three main cards
+│
+├── real-estate/              # Section for real estate services
+│   ├── index.html            # Overview page with three cards (Buy, Sell, Lease)
+│   ├── buy.html              # Buying services + contact form
+│   ├── sell.html             # Selling services + contact form
+│   ├── lease.html            # Leasing services + contact form
+│
+├── education/                # Section for education services
+│   ├── index.html            # Education overview + e-book CTA
+│   ├── ebook.html            # E-book purchase page
+│
+├── affiliate/                # Section for business affiliate program
+│   ├── index.html            # Overview + mentorship explanation
+│   ├── consultation.html      # Schedule a phone consultation
+│
+├── contact.html              # General contact page
+│── faq.html                  # Frequently asked questions
+│── privacy-policy.html        # Privacy policy
+│
+├── assets/                   # Static assets
+│   ├── css/                  # Stylesheets
+│   ├── js/                   # JavaScript files
+│   ├── images/               # Logos, property images, etc.
+│   ├── fonts/                 # Custom fonts
+│
+├── components/               # Reusable UI components
+│   ├── navbar.html           # Navigation bar
+│   ├── footer.html           # Footer section
+│
+├── api/                      # Placeholder for API calls (if needed)
+│   ├── properties.json       # Static data for properties
