@@ -1,119 +1,159 @@
+/* General Styles */
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: Helvetica, sans-serif
 }
 
 :root {
   --gold: rgb(250, 201, 140);
+  --orange: #bb8c2d;
   --beige: rgb(180, 178, 165); 
 }
+
 body {
-  font-family: Helvetica, sans-serif;
-  line-height: 1.5;
-  background-color: var(--beige);
-  color: black;
-  width: 100vw;
+  background-color: #777;
+  color: #333;
+  line-height: 1.6;
 }
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
 header {
-  background-color: black;
+  background-color: #222;
   color: var(--gold);
   text-align: center;
-  padding: 2rem;
+  padding: 0px;
 }
 
 header h1 {
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: 100;
+  margin: 0;
 }
 
 header p {
+  font-size: .7rem;
   font-weight: 100;
-  font-style: italic;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-}
-
-.intro {
-  background-color: #fff;
-  color: #000;
-  padding: 2rem;
-  text-align: left;
-  margin: 0 auto;
-  width: 100vw
-}
-
-.intro h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.container {
-  margin: auto;
-  width: 90vw;
+/* Cards Section */
+.cards .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
-  padding: 20px;
-}
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  justify-content: center;
+  padding: 40px 0;
 }
 
-.card h2 {
-  margin-bottom: 1rem;
+.card {
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 2px 5px 10px rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  text-align: center;
+  width: 20%;
+  min-width: 200px;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 7px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card img {
-  max-width: 100px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
+  width: 100%;
 }
 
-.cta {
-  background-color: white;
-  color: black;
-  border-radius: 10px;
+.card h2 {
+  font-family: "Ibarra Real Nova", serif;
+  font-size: 1.2rem;
+  margin: 15px 5px;
+}
+
+.card p {
+  font-size: .75rem;
+  padding: 0 15px;
+  margin-bottom: .5rem;
+  color: #fff;
+}
+
+.card .btn {
+  display: inline-block;
+  background-color: var(--orange);
+  color: white;
+  text-decoration: none;
+  font-size: .8rem;
+  padding: .7rem 1rem;
+  margin: 15px 0;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.card .btn:hover {
+  background-color: #c69517;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
   text-align: center;
   padding: 20px;
-  width: 80%;
-  margin: 1.5rem auto 3rem auto;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
 }
-.cta a {
+
+footer .container {
+  opacity: .5;
+  font-size: .7rem;
+}
+
+footer nav ul {
+  list-style: none;
+  padding-top: 10px;
+}
+
+footer nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer nav ul li a {
+  color: white;
   text-decoration: none;
-  font-weight: bold;
+  opacity: 0.8;
 }
 
-.contact-button {
-  padding: .25rem 1rem;
-  background-color: var(--gold);
-  color: #000;
-  margin-top: 1rem;
-  border-radius: 5px;
+footer nav ul li a:hover {
+  opacity: 1;
 }
 
-footer {
-  background-color: black;
-  color: var(--gold);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
+
+.ibarra-real-nova {
+  font-family: "Ibarra Real Nova", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-footer p {
-  opacity: .7;
+/* Responsive */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
 }
+
