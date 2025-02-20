@@ -58,7 +58,7 @@ header p {
   background-color: #333;
   color: #fff;
   border-radius: 8px;
-  box-shadow: 2px 5px 10px rgba(255, 255, 255, 0.2);
+  box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   text-align: center;
   width: 20%;
@@ -102,6 +102,19 @@ header p {
 
 .card .btn:hover {
   background-color: #c69517;
+}
+
+.content-container {
+  width: min(90%, 650px);
+  margin: 30px auto;
+}
+
+.content-container p {
+  font-size: clamp(.5rem, .25rem + 1vw, 1rem);
+} 
+
+.content-container ol li {
+  font-size: clamp(.5rem, .25rem + 1vw, 1rem);
 }
 
 /* Footer */
