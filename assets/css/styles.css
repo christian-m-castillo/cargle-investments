@@ -8,12 +8,14 @@
 
 :root {
   --gold: rgb(250, 201, 140);
-  --orange: #bb8c2d;
+  --orange: #bb852d;
   --beige: rgb(180, 178, 165); 
+  --main-background: rgb(89, 102, 106);
+  --holy-grey: #777;
 }
 
 body {
-  background-color: #777;
+  background-color: var(--main-background);
   color: #333;
   line-height: 1.6;
 }
@@ -32,6 +34,11 @@ header {
   color: var(--gold);
   text-align: center;
   padding: 0px;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
 }
 
 header h1 {
@@ -115,6 +122,27 @@ header p {
 
 .content-container ol li {
   font-size: clamp(.5rem, .25rem + 1vw, 1rem);
+}
+
+.contact-card {
+  width: min(80%, 500px);
+  padding: 1rem;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card a {
+  text-decoration: none;
+  background-color: var(--orange);
+  padding: .5rem .9rem;
+  color: inherit;
+  border-radius: 5px;
+  margin: .5rem;
 }
 
 /* Footer */

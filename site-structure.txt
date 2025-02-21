@@ -8,13 +8,16 @@
 │   ├── lease.html            # Leasing services + contact form
 │
 ├── education/                # Section for education services
-│   ├── index.html            # Education overview + e-book CTA
+│   ├── index.html            # Education on tax-lein/foreclosures/wholesaling + e-book CTA
 │   ├── ebook.html            # E-book purchase page
 │
-├── affiliate/                # Section for business affiliate program
-│   ├── index.html            # Overview + mentorship explanation
+├── b2b-development/                # Section for business affiliate program
+│   ├── index.html             # Start-up one-stop-shop
 │   ├── consultation.html      # Schedule a phone consultation
 │
+|-- community-outreach
+|   |--index.html
+|
 ├── contact.html              # General contact page
 │── faq.html                  # Frequently asked questions
 │── privacy-policy.html        # Privacy policy
