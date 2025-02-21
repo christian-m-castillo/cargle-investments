@@ -83,9 +83,9 @@ header p {
   width: 100%;
 }
 
-.card .main h2 {
+.main h2 {
   font-family: "Ibarra Real Nova", serif;
-  font-size: 1.2rem;
+  font-size: 1.12rem;
   margin: 15px 5px;
 }
 
@@ -136,7 +136,7 @@ header p {
   flex-direction: column;
   align-items: center;
   padding: 0 .2rem 2rem .2rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .paragraphs-wrapper h3 {
