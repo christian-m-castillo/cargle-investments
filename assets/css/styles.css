@@ -83,7 +83,7 @@ header p {
   width: 100%;
 }
 
-.card h2 {
+.card .main h2 {
   font-family: "Ibarra Real Nova", serif;
   font-size: 1.2rem;
   margin: 15px 5px;
@@ -116,7 +116,7 @@ header p {
   width: min(90%, 650px);
   margin: 30px auto;
   text-align: left;
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,19 +124,39 @@ header p {
 
 .content-container h2 {
   text-align: center;
+  margin: 1.5rem;
 }
 
 .paragraphs-wrapper {
-  padding: 1rem;
-  background-color: #fff;
+  background-color: #ddd;
   line-height: 1.8;
   border-radius: 10px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 .2rem 2rem .2rem;
+  margin-bottom: 1rem;
+}
+
+.paragraphs-wrapper h3 {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  max-width: 80%;
+}
+
+.paragraphs-wrapper li {
+  color: #000;
+  font-size: .75rem;
+  margin: .5rem auto 1rem auto;
+  max-width: 70%;
 }
 
 .content-container p {
-  font-size: clamp(.5rem, .25rem + 1vw, 1rem);
   color: #000;
-  margin: 1rem;
+  margin-bottom: 1rem;
+  max-width: 70ch;
 } 
 
 .content-container a {
