@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell Your Property | Cargle Investments | Oklahoma</title>
+  <meta name="description" content="Sell your property quickly and hassle-free with Cargle Investments. Get the best market value with expert guidance.">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap');</style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a href="/"><h1 class="ibarra-real-nova">Cargle Investments</h1></a>
+      <p><em>Real estate investment, education, and business growth.</em></p>
+    </div>
+  </header>
+
+  <main>
+    <section class="content">
+      <div class="content-container card">
+        
+        <div class="paragraphs-wrapper">
+          <h2>Sell Your Property</h2>
+          <p>Fill this form to get an offer on your property.</p>
+
+          <form action="" class="selling-form">
+            <label for="full-name">Your Full Name:</label><span class="error name-error"></span>
+            <input type="text" name="full-name" id="full-name" required>
+            <label for="name-on-deed">Name on Deed:</label><span class="error name-on-deed-error"></span>
+            <input type="text" name="name-on-deed" id="name-on-deed" required>
+            <label for="property-address">Property Address:</label><span class="error property-address-error"></span>
+            <input type="address" name="property-address" id="property-address">
+            <label for="email">Email:</label><span class="error email-erro"></span>
+            <input type="email" name="email" id="email" required>
+            <label for="reason-for-selling">Reason for Selling:</label>
+            <input type="text" id="reason-for-selling"><span class="error reason-for-selling-error"></span>
+            <label for="acquisition-method">Property Acquired By:</label>
+            <select name="acquistion-method" id="acquistion-method">
+              <option value="purchase">Purchase</option>
+              <option value="inheiritance">Inheiritance</option>
+              <option value="tax-lien">Tax Lien Sale</option>
+              <option value="divorce">Divorce</option>
+              <option value="other">Other</option>
+            </select>
+            <button type="submit" id="sell-submit" class="submit-button">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Cargle Investments. All rights reserved.</p>
+      <nav>
+        <ul>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector(".selling-form");
+  
+      // Regex patterns for validation
+      const patterns = {
+        name: /^[A-Za-z\s\-']{2,50}$/, // Letters, spaces, hyphens, and apostrophes allowed
+        address: /^[A-Za-z0-9\s,.'-]{5,100}$/, // Allows alphanumeric & common punctuation
+        email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, // Standard email format
+        reason: /^.{5,200}$/ // Any characters, 5 to 200 length
+      };
+  
+      // Function to validate a field
+      function validateField(input, pattern, errorClass, errorMessage) {
+        const value = input.value.trim();
+        const errorSpan = document.querySelector(`.${errorClass}`);
+  
+        if (!pattern.test(value)) {
+          input.style.border = "2px solid red";
+          errorSpan.textContent = errorMessage;
+          return false;
+        } else {
+          input.style.border = "2px solid green";
+          errorSpan.textContent = "";
+          return true;
+        }
+      }
+  
+      // Event listeners for real-time validation
+      document.querySelectorAll("input").forEach((input) => {
+        input.addEventListener("input", function () {
+          if (this.id === "full-name") {
+            validateField(this, patterns.name, "name-error", "Invalid name.");
+          } else if (this.id === "name-on-deed") {
+            validateField(this, patterns.name, "name-on-deed-error", "Invalid name.");
+          } else if (this.id === "property-address") {
+            validateField(this, patterns.address, "property-address-error", "Invalid address.");
+          } else if (this.id === "email") {
+            validateField(this, patterns.email, "email-error", "Enter a valid email.");
+          } else if (this.id === "reason-for-selling") {
+            validateField(this, patterns.reason, "reason-for-selling-error", "Must be at least 5 characters.");
+          }
+        });
+      });
+  
+      // Handle form submission
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let allValid = true;
+  
+        // Validate all fields
+        allValid &= validateField(document.getElementById("full-name"), patterns.name, "name-error", "Invalid name.");
+        allValid &= validateField(document.getElementById("name-on-deed"), patterns.name, "name-on-deed-error", "Invalid name.");
+        allValid &= validateField(document.getElementById("property-address"), patterns.address, "property-address-error", "Invalid address.");
+        allValid &= validateField(document.getElementById("email"), patterns.email, "email-error", "Enter a valid email.");
+        allValid &= validateField(document.getElementById("reason-for-selling"), patterns.reason, "reason-for-selling-error", "Must be at least 5 characters.");
+  
+        if (allValid) {
+          alert("Form submitted successfully!");
+          form.submit();
+        }
+      });
+    });
+  </script>
+  
+  
+</body>
+</html>
