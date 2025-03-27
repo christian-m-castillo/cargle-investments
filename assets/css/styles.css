@@ -53,6 +53,12 @@ header p {
   font-weight: 100;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Cards Section */
 .cards .container {
   display: flex;
@@ -185,6 +191,12 @@ header p {
   border-radius: 5px;
   margin: .5rem;
   width: min(90%, 300px);
+}
+
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .phone-number {
